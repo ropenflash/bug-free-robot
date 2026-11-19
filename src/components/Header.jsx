@@ -30,6 +30,13 @@ export default function Header({ currentPage, setCurrentPage }) {
           >
             About
           </button>
+          <button
+            type="button"
+            className={`nav-link-btn ${currentPage === 'terms' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('terms')}
+          >
+            Terms
+          </button>
         </nav>
       </div>
     </header>
