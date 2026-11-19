@@ -63,6 +63,7 @@ body {
   color: inherit;
   font-weight: 700;
   font-size: 1.25rem;
+  cursor: pointer;
 }
 
 .logo-icon {
@@ -71,18 +72,30 @@ body {
 
 .nav-menu {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
-.nav-link {
-  text-decoration: none;
+.nav-link-btn {
+  background: none;
+  border: none;
   color: #4b5563;
   font-weight: 500;
-  transition: color 0.2s;
+  font-size: 1rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s, background-color 0.2s;
 }
 
-.nav-link:hover {
+.nav-link-btn:hover {
   color: #111827;
+  background-color: #f3f4f6;
+}
+
+.nav-link-btn.active {
+  color: #2563eb;
+  background-color: #eff6ff;
+  font-weight: 600;
 }
 
 /* Footer Styles */
@@ -137,6 +150,169 @@ body {
 }
 
 .footer-copy p {
+  margin: 0;
+}
+
+/* About Page Styles */
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.about-title {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+  color: #111827;
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  color: #4b5563;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-mission {
+  margin-bottom: 3.5rem;
+}
+
+.section-card {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.section-card h2 {
+  margin-top: 0;
+  color: #1e293b;
+}
+
+.section-card p {
+  color: #475569;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.about-values, .about-timeline, .about-team {
+  margin-bottom: 3.5rem;
+}
+
+.about-values h2, .about-timeline h2, .about-team h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  color: #111827;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.value-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.value-icon {
+  font-size: 2.2rem;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.value-card h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #1e293b;
+}
+
+.value-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  background: #fafafa;
+  border-left: 4px solid #2563eb;
+  border-radius: 4px;
+  padding: 1.25rem;
+}
+
+.timeline-year {
+  font-weight: 700;
+  color: #2563eb;
+  font-size: 1.1rem;
+}
+
+.timeline-item h3 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: #1e293b;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.member-avatar {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.team-card h3 {
+  margin: 0.25rem 0;
+  font-size: 1.15rem;
+  color: #1e293b;
+}
+
+.member-role {
+  display: block;
+  font-size: 0.85rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.team-card p {
+  color: #64748b;
+  font-size: 0.9rem;
   margin: 0;
 }
 
