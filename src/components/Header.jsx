@@ -1,17 +1,35 @@
 import React from 'react';
 
-export default function Header() {
+export default function Header({ currentPage, setCurrentPage }) {
   return (
     <header className="site-header">
       <div className="header-inner">
-        <a href="/" className="logo">
+        <a
+          href="#home"
+          className="logo"
+          onClick={(e) => {
+            e.preventDefault();
+            setCurrentPage('home');
+          }}
+        >
           <span className="logo-icon">🤖</span>
           <span className="logo-text">BugFreeRobot</span>
         </a>
         <nav className="nav-menu">
-          <a href="#features" className="nav-link">Features</a>
-          <a href="#about" className="nav-link">About</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <button
+            type="button"
+            className={`nav-link-btn ${currentPage === 'home' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('home')}
+          >
+            Home
+          </button>
+          <button
+            type="button"
+            className={`nav-link-btn ${currentPage === 'about' ? 'active' : ''}`}
+            onClick={() => setCurrentPage('about')}
+          >
+            About
+          </button>
         </nav>
       </div>
     </header>
